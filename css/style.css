@@ -52,6 +52,8 @@ h1 {
 .square {
     border: 1px solid grey;
     float: left;
+    width: 58px;
+    height: 58px;
 }
 
 #container {
