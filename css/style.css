@@ -1,0 +1,66 @@
+button {
+    text-shadow: 0 1px 0 #fff;
+    border-color: #ccc;
+    height: 40px;
+    width: 120px;
+    border-radius: 6px;
+}
+
+button:focus, button:hover {
+    background-color: #e0e0e0;
+}
+
+button:active {
+    background-color: #e0e0e0;
+    border-color: #dbdbdb;
+}
+
+footer {
+    margin-bottom: 0;
+    margin-top: 50px;
+    text-align: right;
+    background-color: #e9e0d6;
+    height: 100px;
+}
+
+#text {
+    width: 80%;
+    margin: auto;
+}
+
+body {
+    font-family: 'Ek Mukta', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #eb7260;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+.square {
+    border: 1px solid grey;
+    float: left;
+}
+
+#container {
+    width: 960px;
+    height: 960px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+footer > span {
+    font-weight: bold;
+}
