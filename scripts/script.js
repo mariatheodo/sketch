@@ -33,12 +33,18 @@ $(document).ready(function() {
 });
 
 function makeGrid(x) {
+	var cont = $("#container");
+	var newDiv = "<div class='square'></div>";
+	var tmp = "";
 	for (var i = 0; i < x; i++) {
+		tmp += "<div class='row'>";
 		for (var j = 0; j < x; j++) {
-			$("#container").append("<div class='square'></div>");
+			tmp += newDiv;
 		}
-	};
-};
+		tmp += "</div>";
+	}
+	cont.append(tmp)
+;};
 
 function getRandom() {
   	return Math.floor(Math.random() * 256);

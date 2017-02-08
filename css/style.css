@@ -68,6 +68,7 @@ h1 {
     padding-top: 20px;
 }
 
-footer > span {
-    font-weight: bold;
+.row {
+    height: auto;
+    overflow: auto;
 }
