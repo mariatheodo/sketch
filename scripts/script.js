@@ -6,7 +6,7 @@ $(document).ready(function() {
 	});
 
 	$("#newGrid").on("click", function() {
-		var size = prompt("How many squares do you want in the grid?");
+		var size = prompt("How many rows do you want in the grid?");
 		if (size > 0) {
 			$("#container").empty();  // delete previous squares
 			var w = parseInt(500 / size)- 2;  // minus 2 because of the borders
