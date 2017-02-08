@@ -1,18 +1,29 @@
 button {
+    letter-spacing: 1px;
     text-shadow: 0 1px 0 #fff;
     border-color: #ccc;
     height: 40px;
     width: 120px;
     border-radius: 6px;
+    background-color: #00D2F1;
 }
 
 button:focus, button:hover {
-    background-color: #e0e0e0;
+    background-color: #10E2F9;
 }
 
 button:active {
-    background-color: #e0e0e0;
+    background-color: #10E2F9;
     border-color: #dbdbdb;
+}
+
+#buttons {
+    margin: auto;
+    width: 600px;
+}
+
+#newGrid {
+    float: right;
 }
 
 footer {
@@ -21,29 +32,23 @@ footer {
     text-align: right;
     background-color: #e9e0d6;
     height: 100px;
-}
-
-#text {
-    width: 80%;
-    margin: auto;
+    font-size: 30px;
+    color: #86269B;
 }
 
 body {
-    font-family: 'Ek Mukta', sans-serif;
+    font-family: 'Barrio', cursive;
     margin: 0;
 }
 
 header {
-    background-color: #eb7260;
+    background-color: #FE9601;
     margin-top: 0;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 h1 {
+    letter-spacing: 5px;
+    font-size: 80px;
     text-align: center;
     color: white;
     margin-top: 0;
@@ -52,13 +57,13 @@ h1 {
 .square {
     border: 1px solid grey;
     float: left;
-    width: 58px;
-    height: 58px;
+    width: 29px;
+    height: 29px;
 }
 
 #container {
-    width: 960px;
-    height: 960px;
+    width: 500px;
+    height: 500px;
     margin: auto;
     padding-top: 20px;
 }

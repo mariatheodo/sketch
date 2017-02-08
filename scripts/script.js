@@ -1,37 +1,45 @@
 $(document).ready(function() {
-	for (var i = 0; i < 16; i++) {
-		for (var j = 0; j < 16; j++) {
-			$("#container").append("<div class='square'></div>");
-		}
-	}
-});
+	makeGrid(16);
 
-$(document).ready(function() {
-	$("#reset").click(function() {
+	$("#reset").on("click", function() {
 		$(".square").css("background-color", "white");
 	});
 
-	$("#newGrid").click(function() {
+	$("#newGrid").on("click", function() {
 		var size = prompt("How many squares do you want in the grid?");
-		$("#container").empty();
-		var w = parseInt(960 / size)- 2;
-
-		for (var i = 0; i < size; i++) {
-			for (var j = 0; j < size; j++) {
-				$("#container").append("<div class='square'></div>");
-			}
+		if (size > 0) {
+			$("#container").empty();  // delete previous squares
+			var w = parseInt(500 / size)- 2;  // minus 2 because of the borders
+			makeGrid(size);
+			$(".square").css({
+				width: function(i) {
+					return w;
+				},
+				height: function(i) {
+					return w;
+				}
+			});
 		};
-		$(".square").css({
-			width: function(i) {
-				return w;
-			},
-			height: function(i) {
-				return w;
-			}
+	});
+
+	$("#container").on("mouseenter", ".square", function() {
+		var x = getRandom();
+		var y = getRandom();
+		var z = getRandom();
+		$(this).css("background-color", function(i) {
+			return "rgb(" + x + ", " + y + "," + z + ")";
 		});
 	});
-
-	$(".square").mouseenter(function() {
-		$(this).css("background-color", "grey");
-	});
 });
+
+function makeGrid(x) {
+	for (var i = 0; i < x; i++) {
+		for (var j = 0; j < x; j++) {
+			$("#container").append("<div class='square'></div>");
+		}
+	};
+};
+
+function getRandom() {
+  	return Math.floor(Math.random() * 256);
+};
